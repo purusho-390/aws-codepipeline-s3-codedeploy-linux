@@ -3,340 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TNSDC - Learning Management System</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>TNSDC Assignment</title>
     <style>
-        /* General Styles */
         body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            color: #333;
-            line-height: 1.6;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        /* Header */
-        header {
-            background: #0078d4;
-            color: #fff;
-            padding: 20px 0;
-        }
-
-        header .logo {
-            display: flex;
-            align-items: center;
-        }
-
-        header .logo img {
-            height: 50px;
-            margin-right: 10px;
-        }
-
-        header .logo h1 {
-            margin: 0;
-            font-size: 24px;
-        }
-
-        header nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: flex-end;
-        }
-
-        header nav ul li {
-            margin-left: 20px;
-        }
-
-        header nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        header nav ul li a.btn-login {
-            background: #fff;
-            color: #0078d4;
-            padding: 10px 20px;
-            border-radius: 5px;
-        }
-
-        /* Hero Section */
-        #hero {
-            background: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
-            color: #fff;
-            padding: 150px 0;
-            text-align: center;
-            position: relative;
-        }
-
-        #hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-        }
-
-        #hero h2 {
-            font-size: 48px;
-            margin-bottom: 20px;
-            position: relative;
-            z-index: 1;
-        }
-
-        #hero p {
-            font-size: 24px;
-            margin-bottom: 40px;
-            position: relative;
-            z-index: 1;
-        }
-
-        #hero .btn-primary {
-            background: #ff5722;
-            color: #fff;
-            padding: 15px 30px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            position: relative;
-            z-index: 1;
-        }
-
-        /* Courses Section */
-        #courses {
-            padding: 80px 0;
-            text-align: center;
-            background: #f9f9f9;
-        }
-
-        #courses h2 {
-            font-size: 36px;
-            margin-bottom: 40px;
-        }
-
-        .course-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-
-        .course-card {
-            background: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-
-        .course-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .course-card i {
-            font-size: 48px;
-            color: #0078d4;
-            margin-bottom: 20px;
-        }
-
-        .course-card h3 {
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-
-        .course-card p {
-            font-size: 16px;
-            color: #666;
-        }
-
-        /* About Section */
-        #about {
-            padding: 80px 0;
-            text-align: center;
-            background: url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
-            color: #fff;
-            position: relative;
-        }
-
-        #about::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.6);
-        }
-
-        #about h2 {
-            font-size: 36px;
-            margin-bottom: 20px;
-            position: relative;
-            z-index: 1;
-        }
-
-        #about p {
-            font-size: 18px;
-            max-width: 800px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 1;
-        }
-
-        /* Contact Section */
-        #contact {
-            padding: 80px 0;
-            text-align: center;
-            background: #f4f4f4;
-        }
-
-        #contact h2 {
-            font-size: 36px;
-            margin-bottom: 40px;
-        }
-
-        #contact form {
-            max-width: 600px;
-            margin: 0 auto;
+            background-color: blue;
+            color: white;
             display: flex;
             flex-direction: column;
-            gap: 20px;
-        }
-
-        #contact form input,
-        #contact form textarea {
-            padding: 15px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-
-        #contact form button {
-            background: #0078d4;
-            color: #fff;
-            padding: 15px 30px;
-            border: none;
-            border-radius: 5px;
-            font-size: 18px;
-            cursor: pointer;
-        }
-
-        /* Footer */
-        footer {
-            background: #333;
-            color: #fff;
-            padding: 20px 0;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
             text-align: center;
         }
-
-        footer .social-icons {
-            margin-top: 10px;
+        .container {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
         }
-
-        footer .social-icons a {
-            color: #fff;
-            margin: 0 10px;
-            font-size: 20px;
-        }
-
-        footer .social-icons a:hover {
-            color: #0078d4;
+        .description {
+            font-size: 18px;
+            max-width: 600px;
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="logo">
-                <h1>TNSDC</h1>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#courses">Courses</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="#login" class="btn-login">Login</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <section id="hero">
-        <div class="container">
-            <h2>Welcome to TNSDC LMS</h2>
-            <p>Empowering your future with skill development and training.</p>
-            <a href="#courses" class="btn-primary">Explore Courses</a>
-        </div>
-    </section>
-
-    <section id="courses">
-        <div class="container">
-            <h2>Our Courses</h2>
-            <div class="course-grid">
-                <div class="course-card">
-                    <i class="fas fa-laptop-code"></i>
-                    <h3>Web Development</h3>
-                    <p>Learn to build modern websites and web applications.</p>
-                </div>
-                <div class="course-card">
-                    <i class="fas fa-mobile-alt"></i>
-                    <h3>Mobile App Development</h3>
-                    <p>Create mobile apps for Android and iOS platforms.</p>
-                </div>
-                <div class="course-card">
-                    <i class="fas fa-chart-line"></i>
-                    <h3>Data Science</h3>
-                    <p>Master data analysis, machine learning, and AI.</p>
-                </div>
-                <div class="course-card">
-                    <i class="fas fa-chart-line"></i>
-                    <h3>AWS AND DEVOPS</h3>
-                    <p>Master AWS CLOUD COMPUTING, DEVOPS SKILLS.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="about">
-        <div class="container">
-            <h2>About Us</h2>
-            <p>TNSDC is dedicated to providing high-quality skill development programs to empower individuals and enhance their career prospects. Our mission is to bridge the gap between education and industry requirements.</p>
-        </div>
-    </section>
-
-    <section id="contact">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <form>
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message" required></textarea>
-                <button type="submit" class="btn-primary">Send Message</button>
-            </form>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2023 TNSDC. All rights reserved.</p>
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-            </div>
-        </div>
-    </footer>
+    <div class="container">
+        TNSDC ASSIGNMENT
+    </div>
+    <div class="description">
+        This is a sample website deployed on AWS Elastic Beanstalk using AWS CodePipeline.
+    </div>
+    
+    <!-- AWS CodePipeline Integration -->
+    <script>
+        console.log("AWS CodePipeline integrated successfully!");
+    </script>
 </body>
 </html>
